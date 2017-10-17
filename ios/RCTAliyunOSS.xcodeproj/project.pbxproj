@@ -28,23 +28,23 @@
 		00CAEE4E1DC05BFC003B3B1F /* libRCTAliyunOSS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTAliyunOSS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CAEE511DC05BFC003B3B1F /* RCTAliyunOSS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTAliyunOSS.h; sourceTree = "<group>"; };
 		00CAEE521DC05BFC003B3B1F /* RCTAliyunOSS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTAliyunOSS.m; sourceTree = "<group>"; };
+		0AFF1BA31F960CF300F75196 /* AliyunOSSiOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AliyunOSSiOS.h; path = AliyunOSSSDK/AliyunOSSiOS.h; sourceTree = "<group>"; };
+		0AFF1BA41F960CF300F75196 /* OSSBolts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSBolts.h; path = AliyunOSSSDK/OSSBolts.h; sourceTree = "<group>"; };
+		0AFF1BA51F960CF300F75196 /* OSSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSClient.h; path = AliyunOSSSDK/OSSClient.h; sourceTree = "<group>"; };
+		0AFF1BA61F960CF300F75196 /* OSSCancellationTokenSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCancellationTokenSource.h; path = AliyunOSSSDK/OSSCancellationTokenSource.h; sourceTree = "<group>"; };
+		0AFF1BA71F960CF300F75196 /* OSSCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCompat.h; path = AliyunOSSSDK/OSSCompat.h; sourceTree = "<group>"; };
+		0AFF1BA81F960CF300F75196 /* OSSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSService.h; path = AliyunOSSSDK/OSSService.h; sourceTree = "<group>"; };
+		0AFF1BA91F960CF400F75196 /* OSSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSLog.h; path = AliyunOSSSDK/OSSLog.h; sourceTree = "<group>"; };
+		0AFF1BAA1F960CF400F75196 /* OSSNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSNetworking.h; path = AliyunOSSSDK/OSSNetworking.h; sourceTree = "<group>"; };
+		0AFF1BAB1F960CF400F75196 /* OSSCancellationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCancellationToken.h; path = AliyunOSSSDK/OSSCancellationToken.h; sourceTree = "<group>"; };
+		0AFF1BAC1F960CF400F75196 /* OSSTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSTask.h; path = AliyunOSSSDK/OSSTask.h; sourceTree = "<group>"; };
+		0AFF1BAD1F960CF400F75196 /* OSSTaskCompletionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSTaskCompletionSource.h; path = AliyunOSSSDK/OSSTaskCompletionSource.h; sourceTree = "<group>"; };
+		0AFF1BAE1F960CF400F75196 /* OSSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSUtil.h; path = AliyunOSSSDK/OSSUtil.h; sourceTree = "<group>"; };
+		0AFF1BAF1F960CF400F75196 /* OSSCancellationTokenRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCancellationTokenRegistration.h; path = AliyunOSSSDK/OSSCancellationTokenRegistration.h; sourceTree = "<group>"; };
+		0AFF1BB01F960CF400F75196 /* OSSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSModel.h; path = AliyunOSSSDK/OSSModel.h; sourceTree = "<group>"; };
+		0AFF1BB11F960CF500F75196 /* OSSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSDefine.h; path = AliyunOSSSDK/OSSDefine.h; sourceTree = "<group>"; };
+		0AFF1BB21F960CF500F75196 /* OSSExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSExecutor.h; path = AliyunOSSSDK/OSSExecutor.h; sourceTree = "<group>"; };
 		371D4A451DDDC34B0063F802 /* AliyunOSSiOS */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = AliyunOSSiOS; path = AliyunOSSSDK/AliyunOSSiOS; sourceTree = "<group>"; };
-		371D4A461DDDC34B0063F802 /* OSSBolts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSBolts.h; path = AliyunOSSSDK/OSSBolts.h; sourceTree = "<group>"; };
-		371D4A471DDDC34B0063F802 /* OSSCancellationToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCancellationToken.h; path = AliyunOSSSDK/OSSCancellationToken.h; sourceTree = "<group>"; };
-		371D4A481DDDC34B0063F802 /* OSSCancellationTokenRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCancellationTokenRegistration.h; path = AliyunOSSSDK/OSSCancellationTokenRegistration.h; sourceTree = "<group>"; };
-		371D4A491DDDC34B0063F802 /* OSSCancellationTokenSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCancellationTokenSource.h; path = AliyunOSSSDK/OSSCancellationTokenSource.h; sourceTree = "<group>"; };
-		371D4A4A1DDDC34B0063F802 /* OSSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSClient.h; path = AliyunOSSSDK/OSSClient.h; sourceTree = "<group>"; };
-		371D4A4B1DDDC34B0063F802 /* OSSCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSCompat.h; path = AliyunOSSSDK/OSSCompat.h; sourceTree = "<group>"; };
-		371D4A4C1DDDC34B0063F802 /* OSSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSDefine.h; path = AliyunOSSSDK/OSSDefine.h; sourceTree = "<group>"; };
-		371D4A4D1DDDC34B0063F802 /* OSSExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSExecutor.h; path = AliyunOSSSDK/OSSExecutor.h; sourceTree = "<group>"; };
-		371D4A4E1DDDC34B0063F802 /* OSSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSLog.h; path = AliyunOSSSDK/OSSLog.h; sourceTree = "<group>"; };
-		371D4A4F1DDDC34B0063F802 /* OSSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSModel.h; path = AliyunOSSSDK/OSSModel.h; sourceTree = "<group>"; };
-		371D4A501DDDC34B0063F802 /* OSSNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSNetworking.h; path = AliyunOSSSDK/OSSNetworking.h; sourceTree = "<group>"; };
-		371D4A511DDDC34B0063F802 /* OSSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSService.h; path = AliyunOSSSDK/OSSService.h; sourceTree = "<group>"; };
-		371D4A521DDDC34B0063F802 /* OSSTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSTask.h; path = AliyunOSSSDK/OSSTask.h; sourceTree = "<group>"; };
-		371D4A531DDDC34B0063F802 /* OSSTaskCompletionSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSTaskCompletionSource.h; path = AliyunOSSSDK/OSSTaskCompletionSource.h; sourceTree = "<group>"; };
-		371D4A541DDDC34B0063F802 /* OSSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSUtil.h; path = AliyunOSSSDK/OSSUtil.h; sourceTree = "<group>"; };
-		371D4A551DDDC34B0063F802 /* OSSXMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OSSXMLDictionary.h; path = AliyunOSSSDK/OSSXMLDictionary.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,22 +89,22 @@
 			isa = PBXGroup;
 			children = (
 				371D4A451DDDC34B0063F802 /* AliyunOSSiOS */,
-				371D4A461DDDC34B0063F802 /* OSSBolts.h */,
-				371D4A471DDDC34B0063F802 /* OSSCancellationToken.h */,
-				371D4A481DDDC34B0063F802 /* OSSCancellationTokenRegistration.h */,
-				371D4A491DDDC34B0063F802 /* OSSCancellationTokenSource.h */,
-				371D4A4A1DDDC34B0063F802 /* OSSClient.h */,
-				371D4A4B1DDDC34B0063F802 /* OSSCompat.h */,
-				371D4A4C1DDDC34B0063F802 /* OSSDefine.h */,
-				371D4A4D1DDDC34B0063F802 /* OSSExecutor.h */,
-				371D4A4E1DDDC34B0063F802 /* OSSLog.h */,
-				371D4A4F1DDDC34B0063F802 /* OSSModel.h */,
-				371D4A501DDDC34B0063F802 /* OSSNetworking.h */,
-				371D4A511DDDC34B0063F802 /* OSSService.h */,
-				371D4A521DDDC34B0063F802 /* OSSTask.h */,
-				371D4A531DDDC34B0063F802 /* OSSTaskCompletionSource.h */,
-				371D4A541DDDC34B0063F802 /* OSSUtil.h */,
-				371D4A551DDDC34B0063F802 /* OSSXMLDictionary.h */,
+				0AFF1BA31F960CF300F75196 /* AliyunOSSiOS.h */,
+				0AFF1BA41F960CF300F75196 /* OSSBolts.h */,
+				0AFF1BAB1F960CF400F75196 /* OSSCancellationToken.h */,
+				0AFF1BAF1F960CF400F75196 /* OSSCancellationTokenRegistration.h */,
+				0AFF1BA61F960CF300F75196 /* OSSCancellationTokenSource.h */,
+				0AFF1BA51F960CF300F75196 /* OSSClient.h */,
+				0AFF1BA71F960CF300F75196 /* OSSCompat.h */,
+				0AFF1BB11F960CF500F75196 /* OSSDefine.h */,
+				0AFF1BB21F960CF500F75196 /* OSSExecutor.h */,
+				0AFF1BA91F960CF400F75196 /* OSSLog.h */,
+				0AFF1BB01F960CF400F75196 /* OSSModel.h */,
+				0AFF1BAA1F960CF400F75196 /* OSSNetworking.h */,
+				0AFF1BA81F960CF300F75196 /* OSSService.h */,
+				0AFF1BAC1F960CF400F75196 /* OSSTask.h */,
+				0AFF1BAD1F960CF400F75196 /* OSSTaskCompletionSource.h */,
+				0AFF1BAE1F960CF400F75196 /* OSSUtil.h */,
 			);
 			name = AliyunOSSSDK;
 			sourceTree = "<group>";
@@ -266,6 +266,7 @@
 		00CAEE581DC05BFC003B3B1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				LIBRARY_SEARCH_PATHS = (
@@ -281,6 +282,7 @@
 		00CAEE591DC05BFC003B3B1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../react-native/React/**";
 				LIBRARY_SEARCH_PATHS = (
