@@ -28,6 +28,13 @@ const AliyunOSS = {
     NativeAliyunOSS.initWithKey(conf.AccessKey, conf.SecretKey, EndPoint);
   },
   /*初始化ossclient，
+  **通过Token
+  *
+  */
+  initWithToken(TokenInfo) {
+    NativeAliyunOSS.initWithToken(TokenInfo);
+  },
+  /*初始化ossclient，
   **通过签名字符串，此处采用的是服务端签名
   *
   */

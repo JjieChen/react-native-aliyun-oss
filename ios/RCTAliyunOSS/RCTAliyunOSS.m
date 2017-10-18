@@ -11,6 +11,13 @@
 #import "OSSService.h"
 
 
+#ifdef DEBUG
+#define NSLog(format, ...) printf("\n[%s] %s [第%d行] %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ## __VA_ARGS__] UTF8String]);
+//#else
+//#define NSLog(format, ...)
+#endif
+
+
 @implementation RCTAliyunOSS{
     
     OSSClient *client;
@@ -55,6 +62,30 @@ RCT_EXPORT_METHOD(initWithKey:(NSString *)AccessKey
     conf.timeoutIntervalForResource = 24 * 60 * 60;
     
     client = [[OSSClient alloc] initWithEndpoint:Endpoint credentialProvider:credential clientConfiguration:conf];
+}
+
+// 由阿里云颁发的AccessKeyId/AccessKeySecret初始化客户端。
+// 明文设置secret的方式建议只在测试时使用，
+// 如果已经在bucket上绑定cname，将该cname直接设置到endPoint即可
+RCT_EXPORT_METHOD(initWithToken:(NSDictionary *)dic){
+    
+    OSSFederationToken * token = [OSSFederationToken new];
+    token.tAccessKey =  [dic objectForKey:@"AccessKeyId"];
+    token.tSecretKey =  [dic objectForKey:@"AccessKeySecret"];
+    token.tToken =  [dic objectForKey:@"SecurityToken"];
+    token.expirationTimeInGMTFormat = [dic objectForKey:@"Expiration"];
+    NSString *endpoint = [dic objectForKey:@"Endpoint"];
+    
+    id<OSSCredentialProvider> credential = [[OSSFederationCredentialProvider alloc] initWithFederationTokenGetter:^OSSFederationToken * {
+        return token;
+    }];
+    
+    OSSClientConfiguration * conf = [OSSClientConfiguration new];
+    conf.maxRetryCount = 3; // 网络请求遇到异常失败后的重试次数
+    conf.timeoutIntervalForRequest = 30; // 网络请求的超时时间
+    conf.timeoutIntervalForResource = 24 * 60 * 60; // 允许资源传输的最长时间
+    
+    client = [[OSSClient alloc] initWithEndpoint:endpoint credentialProvider:credential ];
 }
 
 //通过签名方式初始化，需要服务端实现签名字符串，签名算法参考阿里云文档
