@@ -10,6 +10,7 @@ import com.alibaba.sdk.android.oss.callback.OSSProgressCallback;
 import com.alibaba.sdk.android.oss.common.auth.OSSCredentialProvider;
 import com.alibaba.sdk.android.oss.common.auth.OSSCustomSignerCredentialProvider;
 import com.alibaba.sdk.android.oss.common.auth.OSSPlainTextAKSKCredentialProvider;
+import com.alibaba.sdk.android.oss.common.auth.OSSStsTokenCredentialProvider;
 import com.alibaba.sdk.android.oss.internal.OSSAsyncTask;
 import com.alibaba.sdk.android.oss.model.ObjectMetadata;
 import com.alibaba.sdk.android.oss.model.GetObjectRequest;
@@ -41,6 +42,8 @@ import android.util.Log;
 
 /**
  * Created by lesonli on 2016/10/31.
+ * Modify by gimhol on 2017/10/18
+ *       Add Method: initWithToken.
  */
 
 public class aliyunossModule extends ReactContextBaseJavaModule {
@@ -65,6 +68,25 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void enableOSSLog() {
         Log.d("AliyunOSS", "OSSLog 已开启!");
+    }
+
+    @ReactMethod
+    public void initWithToken(ReadableMap token) {
+        OSSCredentialProvider credentialProvider = new OSSStsTokenCredentialProvider(
+                token.getString("AccessKeyId"),
+                token.getString("AccessKeySecret"),
+                token.getString("SecurityToken")
+        );
+
+        ClientConfiguration conf = new ClientConfiguration();
+        conf.setConnectionTimeout(15 * 1000); // 连接超时，默认15秒
+        conf.setSocketTimeout(15 * 1000); // socket超时，默认15秒
+        conf.setMaxConcurrentRequest(5); // 最大并发请求书，默认5个
+        conf.setMaxErrorRetry(2); // 失败后最大重试次数，默认2次
+
+        oss = new OSSClient(getReactApplicationContext().getApplicationContext(), token.getString("Endpoint"), credentialProvider, conf);
+
+        Log.d("AliyunOSS", "OSS initWithToken ok!");
     }
 
     @ReactMethod
