@@ -40,6 +40,9 @@ import java.lang.String;
 import android.os.Environment;
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by lesonli on 2016/10/31.
  * Modify by gimhol on 2017/10/18
@@ -127,10 +130,15 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void uploadObjectAsync(String bucketName, String sourceFile, String ossFile, String updateDate, final Promise promise) {
-// 构造上传请求
+        if (sourceFile != null) {
+            sourceFile = sourceFile.replace("file://", "");
+        }
         PutObjectRequest put = new PutObjectRequest(bucketName, ossFile, sourceFile);
         ObjectMetadata metadata = new ObjectMetadata();
-        metadata.setHeader("Date",updateDate);
+        if( updateDate != null ){
+            metadata.setHeader("Date",updateDate);
+        }
+        metadata.setContentType("application/octet-stream");
         put.setMetadata(metadata);
 
         // 异步上传时可以设置进度回调
@@ -159,19 +167,33 @@ public class aliyunossModule extends ReactContextBaseJavaModule {
 
             @Override
             public void onFailure(PutObjectRequest request, ClientException clientExcepion, ServiceException serviceException) {
+
+                JSONObject jsonObj = new JSONObject();
+
+                String msg="";
                 // 请求异常
                 if (clientExcepion != null) {
                     // 本地异常如网络异常等
                     clientExcepion.printStackTrace();
+                    try {
+                        jsonObj.put("errCode", "-1" );
+                        jsonObj.put("clientErr", clientExcepion.getMessage() );
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
-                if (serviceException != null) {
-                    // 服务异常
-                    Log.e("ErrorCode", serviceException.getErrorCode());
-                    Log.e("RequestId", serviceException.getRequestId());
-                    Log.e("HostId", serviceException.getHostId());
-                    Log.e("RawMessage", serviceException.getRawMessage());
+                else if (serviceException != null) {
+                    serviceException.printStackTrace();
+                    try {
+                        jsonObj.put("errCode", serviceException.getErrorCode() );
+                        jsonObj.put("requestId", serviceException.getRequestId());
+                        jsonObj.put("hostId", serviceException.getHostId());
+                        jsonObj.put("rawMessage", serviceException.getRawMessage());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
-                promise.reject("UploadFaile", "message:123123");
+                promise.reject("UploadFailed", jsonObj.toString());
             }
         });
         Log.d("AliyunOSS", "OSS uploadObjectAsync ok!");
